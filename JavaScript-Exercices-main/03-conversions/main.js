@@ -1,17 +1,10 @@
 const saisie = '7';
-// Essayez aussi 'abc' et '0'.
 
-try {
-    let nombre = Number(saisie);
-    if (isNaN(nombre)) throw "Ce n'est pas un nombre";
-    console.log("Le nombre actuel est" + nombre);
+const quantite = Number(saisie);
 
-    while(nombre % 2 != 0) {
-        nombre *= 2
-        console.log("Actuel: " + nombre);
-    }
+if (!Number.isInteger(quantite) || quantite <= 0) {
+  console.log('Quantité invalide');
 
-} catch (error) {
-    console.log("Erreur :" + error);
+} else {
+  console.log(quantite * 2);
 }
-
