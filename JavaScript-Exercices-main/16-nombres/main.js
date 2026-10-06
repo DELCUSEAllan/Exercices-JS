@@ -1,7 +1,9 @@
 const prix = 12.345;
 // Complétez ici.
 
-const FormaterEuros = new Intl.NumberFormat('fr-FR');
+const FormaterEuro = new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'EUR'
+});
 
-console.log(FormaterEuros.format(prix));
-console.log(prix.toFixed(2));
+console.log(FormaterEuro.format(prix));
